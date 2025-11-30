@@ -24,7 +24,8 @@ export const projects: PortfolioProject[] = [
     ],
     wireframes: [
       { url: '/images/wireframe/collaboration_wireframe.png', caption: 'Task Collaboration Wireframe - Initial layout exploration' },
-      { url: '/images/wireframe/home_wireframe.png', caption: 'Home Dashboard Wireframe - Information architecture for main dashboard' }
+      { url: '/images/wireframe/home_wireframe.png', caption: 'Home Dashboard Wireframe - Information architecture for main dashboard' },
+      { url: '/images/wireframe/gamification_wireframe.png', caption: 'Gamification Wireframe - User engagement and reward system structure' }
     ],
     prototypes: [
       { url: 'https://www.figma.com', label: 'Interactive Prototype', description: 'Full Figma prototype demonstrating task creation, messaging, and progress tracking workflows. Test key user interactions and provide feedback.' }
