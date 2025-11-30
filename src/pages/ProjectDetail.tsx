@@ -33,28 +33,6 @@ export default function ProjectDetail() {
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">{project.title}</h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mb-6 sm:mb-8">{project.description}</p>
-          
-          {/* High-Fidelity Images Card */}
-          {project.images && project.images.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">High-Fidelity Designs</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-                {project.images.map((image, idx) => (
-                  <div key={idx} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                    <div className="relative w-full aspect-square bg-white overflow-hidden">
-                      <img
-                        src={image.url}
-                        alt={image.caption || `High-fidelity design ${idx + 1} for ${project.title}`}
-                        loading="lazy"
-                        className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <p className="p-2 text-xs text-gray-700 font-medium line-clamp-2">{image.caption}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
 
         {project.thumbnail && project.images && project.images.length === 0 && (
@@ -94,24 +72,6 @@ export default function ProjectDetail() {
                 </span>
               ))}
             </div>
-          </div>
-        </div>
-
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Problem Statement</h2>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{project.problem_statement}</p>
-          </div>
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Goal</h2>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{project.goal}</p>
-          </div>
-        </div>
-
-        <div className="mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Design Approach</h2>
-          <div className="bg-blue-50 p-6 sm:p-8 rounded-2xl border border-blue-200">
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">{project.approach}</p>
           </div>
         </div>
 
@@ -184,6 +144,24 @@ export default function ProjectDetail() {
             </div>
           </div>
         )}
+
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Problem Statement</h2>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{project.problem_statement}</p>
+          </div>
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Goal</h2>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{project.goal}</p>
+          </div>
+        </div>
+
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Design Approach</h2>
+          <div className="bg-blue-50 p-6 sm:p-8 rounded-2xl border border-blue-200">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">{project.approach}</p>
+          </div>
+        </div>
 
         {project.prototypes && project.prototypes.length > 0 && (
           <div className="mb-8 sm:mb-12">
