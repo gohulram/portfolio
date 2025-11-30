@@ -6,7 +6,7 @@ export const projects: PortfolioProject[] = [
     title: 'Task Collaboration App',
     slug: 'task-collaboration-app',
     description: 'A task management app designed to help teams work together better. Features include easy-to-use dashboards, real-time messaging, and progress tracking. This is my main design project showcasing my UI/UX skills.',
-    thumbnail: '/images/high-fidelity/collaboration.png',
+    thumbnail: '/images/thumbnail/close-up-young-business-team-working.jpg',
     category: 'case-study',
     role: 'Lead UI/UX Designer',
     problem_statement: 'Many teams have trouble working together because communication is scattered across different apps, task priorities are unclear, and it\'s hard to see how projects are progressing. Existing tools are either too complicated or missing important features, which wastes time and makes teams less productive.',
@@ -23,13 +23,11 @@ export const projects: PortfolioProject[] = [
       { url: '/images/high-fidelity/signup page.png', caption: 'Signup Page - User registration interface' }
     ],
     wireframes: [
-      { url: '/images/wireframe/task_collaboration.png', caption: 'Task Collaboration Wireframe - Initial layout exploration' },
-      { url: '/images/wireframe/collaboration_wireframe.png', caption: 'Collaboration Wireframe - Team interaction structure' },
+      { url: '/images/wireframe/collaboration_wireframe.png', caption: 'Task Collaboration Wireframe - Initial layout exploration' },
       { url: '/images/wireframe/home_wireframe.png', caption: 'Home Dashboard Wireframe - Information architecture for main dashboard' }
     ],
     prototypes: [
-      { url: 'https://www.figma.com', label: 'Interactive Prototype', description: 'Full Figma prototype demonstrating task creation, messaging, and progress tracking workflows. Test key user interactions and provide feedback.' },
-      { url: 'https://www.figma.com', label: 'Component Library', description: 'Complete design system with all reusable components, spacing system, and color palette documented for developer handoff.' }
+      { url: 'https://www.figma.com', label: 'Interactive Prototype', description: 'Full Figma prototype demonstrating task creation, messaging, and progress tracking workflows. Test key user interactions and provide feedback.' }
     ],
     figma_wireframe_link: 'https://www.figma.com/design/KjhMjYyqLJBguzAea45clz/task-collaboration-app?node-id=4016-328&t=TDIZDJtlgD2EtbMl-1',
     figma_highfidelity_link: 'https://www.figma.com/design/KjhMjYyqLJBguzAea45clz/task-collaboration-app?node-id=69-353&t=TDIZDJtlgD2EtbMl-1',
@@ -42,7 +40,7 @@ export const projects: PortfolioProject[] = [
     title: 'Pet Pathway Web Application',
     slug: 'pet-pathway',
     description: 'A full-stack web application built with React, Node.js, and MongoDB. This project showcases my technical development skills including frontend and backend development, database design, and API integration.',
-    thumbnail: '/images/high-fidelity/collaboration.png',
+    thumbnail: '/images/thumbnail/cute-pet-collage-isolated.jpg',
     category: 'project',
     role: 'Full-Stack Developer',
     problem_statement: 'Pet adoption websites often have too many options with poor search features, and booking vet appointments is spread across different services. Pet owners need a better way to find pets and schedule consultations.',

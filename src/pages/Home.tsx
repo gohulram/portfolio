@@ -12,7 +12,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-blue-200">
-              UI/UX Designer & Figma Expert
+              UI/UX Designer & Figma Beginner
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Designing Digital
@@ -55,7 +55,7 @@ export default function Home() {
                   <Figma className="w-8 h-8 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 font-medium">Expertise in</p>
+                  <p className="text-sm text-gray-600 font-medium">Beginner in</p>
                   <p className="text-lg font-bold text-gray-900">Figma Design</p>
                   <p className="text-xs text-gray-500">Prototyping & Design Systems</p>
                 </div>
