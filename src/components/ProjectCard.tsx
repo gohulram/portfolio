@@ -14,25 +14,26 @@ export default function ProjectCard({ slug, title, description, thumbnail, role,
   return (
     <Link to={`/projects/${slug}`}>
       <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+        <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
           <img
             src={thumbnail}
-            alt={title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            alt={`${title} - Project preview thumbnail`}
+            loading="lazy"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
         </div>
 
-        <div className="p-6">
-          <div className="flex items-start justify-between mb-3">
-            <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors flex-1">
+        <div className="p-4 sm:p-6">
+          <div className="flex items-start justify-between mb-2 sm:mb-3">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors flex-1">
               {title}
             </h3>
-            <ArrowRight className="w-5 h-5 text-blue-600 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-2" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-2 flex-shrink-0 ml-2" />
           </div>
 
-          <p className="text-sm text-gray-600 mb-3 font-medium">{role}</p>
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
+          <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3 font-medium">{role}</p>
+          <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">{description}</p>
 
           <div className="flex flex-wrap gap-2">
             {skills.slice(0, 3).map((skill) => (

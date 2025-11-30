@@ -14,17 +14,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+        <Link to="/" className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
           Gohul H
         </Link>
 
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-sm lg:text-base text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               {link.label}
             </Link>
@@ -39,13 +39,13 @@ export default function Header() {
         </button>
 
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-t md:hidden">
-            <div className="flex flex-col gap-4 p-6">
+          <div className="absolute top-full left-0 right-0 bg-white border-t md:hidden shadow-lg">
+            <div className="flex flex-col gap-3 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="text-base text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

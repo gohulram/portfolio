@@ -15,6 +15,8 @@ export interface PortfolioProject {
   images: { url: string; caption: string }[];
   wireframes: { url: string; caption: string }[];
   prototypes: { url: string; label: string; description: string }[];
+  figma_wireframe_link?: string;
+  figma_highfidelity_link?: string;
   results: string;
   featured: boolean;
   order: number;

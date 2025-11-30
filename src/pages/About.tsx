@@ -64,19 +64,19 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <div className="mb-20">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Me</h1>
-          <div className="grid md:grid-cols-2 gap-12">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">About Me</h1>
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
             <div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                I'm a passionate UI/UX Designer with a strong foundation in full-stack development. My background in software engineering gives me a unique perspective on design—I understand not just how things should look, but also how they should work.
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+                I'm a UI/UX Designer who loves creating simple, beautiful designs. I also know how to code, which helps me understand what's possible and work better with developers.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                I believe great design solves problems. Every interface I create is driven by research, user empathy, and a commitment to clarity. I bridge the gap between designers and developers, ensuring that beautiful designs become reality.
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+                I believe good design solves real problems. Every design I create starts with understanding users and their needs. I make sure designs are clear, easy to use, and actually work when built.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                I'm constantly learning, experimenting with new tools and methodologies, and pushing my boundaries to create experiences that users love.
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                I'm always learning new things, trying new tools, and finding better ways to create designs that people enjoy using.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200">
@@ -103,12 +103,12 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 flex items-center gap-3">
-            <Code className="w-10 h-10 text-blue-600" />
+        <div className="mb-12 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 flex items-center gap-3">
+            <Code className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" />
             Skills & Expertise
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {skills.map((skillGroup) => (
               <div key={skillGroup.category} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">{skillGroup.category}</h3>
@@ -125,24 +125,24 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 flex items-center gap-3">
-            <Briefcase className="w-10 h-10 text-blue-600" />
+        <div className="mb-12 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 flex items-center gap-3">
+            <Briefcase className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" />
             Professional Experience
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {experience.map((exp) => (
-              <div key={exp.title} className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
-                <div className="flex justify-between items-start mb-4">
+              <div key={exp.title} className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-4 gap-2">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{exp.title}</h3>
-                    <p className="text-blue-600 font-bold text-lg">{exp.company}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{exp.title}</h3>
+                    <p className="text-blue-600 font-bold text-base sm:text-lg">{exp.company}</p>
                   </div>
-                  <p className="text-gray-600 font-medium">{exp.period}</p>
+                  <p className="text-gray-600 font-medium text-sm sm:text-base">{exp.period}</p>
                 </div>
                 <ul className="space-y-2">
                   {exp.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-3 text-gray-700">
+                    <li key={highlight} className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                       {highlight}
                     </li>
@@ -153,31 +153,31 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 flex items-center gap-3">
-            <GraduationCap className="w-10 h-10 text-blue-600" />
+        <div className="mb-12 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 flex items-center gap-3">
+            <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" />
             Education
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {education.map((edu) => (
-              <div key={edu.degree} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
-                  <span className="text-blue-600 font-bold text-lg">CGPA: {edu.cgpa}</span>
+              <div key={edu.degree} className="bg-white p-5 sm:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900">{edu.degree}</h3>
+                  <span className="text-blue-600 font-bold text-base sm:text-lg">CGPA: {edu.cgpa}</span>
                 </div>
-                <p className="text-gray-700 font-medium mb-1">{edu.institution}</p>
-                <p className="text-gray-600">{edu.period}</p>
+                <p className="text-sm sm:text-base text-gray-700 font-medium mb-1">{edu.institution}</p>
+                <p className="text-sm sm:text-base text-gray-600">{edu.period}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 flex items-center gap-3">
-            <Award className="w-10 h-10 text-blue-600" />
+        <div className="mb-12 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 flex items-center gap-3">
+            <Award className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" />
             Achievements & Certifications
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {achievements.map((achievement) => (
               <div key={achievement} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200 flex items-start gap-4">
                 <Zap className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
@@ -188,11 +188,11 @@ export default function About() {
         </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to collaborate?</h2>
-          <p className="text-xl text-gray-600 mb-8">Let's discuss how my skills and perspective can help your next project succeed.</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Ready to collaborate?</h2>
+          <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">Let's discuss how I can help with your next project.</p>
           <Link
             to="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all shadow-lg"
+            className="inline-block bg-blue-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition-all shadow-lg text-sm sm:text-base"
           >
             Contact Me
           </Link>

@@ -2,9 +2,9 @@ import { Mail, Phone, MapPin, Github, Linkedin, FileText } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-gray-300 py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+    <footer className="bg-slate-900 text-gray-300 py-12 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Get In Touch</h3>
             <div className="space-y-3">
@@ -48,8 +48,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center">
-          <p>&copy; 2025 Gohul H. All rights reserved. Crafted with care for design excellence.</p>
+        <div className="border-t border-gray-700 pt-6 sm:pt-8 text-center">
+          <p className="text-sm sm:text-base">&copy; 2025 Gohul H. All rights reserved. Crafted with care for design excellence.</p>
         </div>
       </div>
     </footer>
