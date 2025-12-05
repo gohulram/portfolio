@@ -1,12 +1,19 @@
 import type { PortfolioProject } from '../types/portfolio';
 
+// Helper to get image path with base path for GitHub Pages
+const getImagePath = (path: string): string => {
+  const base = import.meta.env.BASE_URL || '/';
+  const baseClean = base.endsWith('/') ? base.slice(0, -1) : base;
+  return path.startsWith('/') ? `${baseClean}${path}` : path;
+};
+
 export const projects: PortfolioProject[] = [
   {
     id: '1',
     title: 'Task Collaboration App',
     slug: 'task-collaboration-app',
     description: 'A task management app designed to help teams work together better. Features include easy-to-use dashboards, real-time messaging, and progress tracking. This is my main design project showcasing my UI/UX skills.',
-    thumbnail: '/images/thumbnail/close-up-young-business-team-working.jpg',
+    thumbnail: getImagePath('/images/thumbnail/close-up-young-business-team-working.jpg'),
     category: 'case-study',
     role: 'Beginner UI/UX Designer',
     problem_statement: 'Many teams have trouble working together because communication is scattered across different apps, task priorities are unclear, and it\'s hard to see how projects are progressing. Existing tools are either too complicated or missing important features, which wastes time and makes teams less productive.',
@@ -16,16 +23,16 @@ export const projects: PortfolioProject[] = [
     tools: ['Figma', 'Usability Testing', 'Design Systems', 'Prototyping'],
     skills_showcased: ['User Research', 'User Flows', 'Wireframing', 'Visual Design', 'Information Architecture', 'Prototyping', 'Design Systems', 'Accessibility'],
     images: [
-      { url: '/images/high-fidelity/collaboration.png', caption: 'Task Collaboration - Main collaboration interface showing team interactions' },
-      { url: '/images/high-fidelity/task.png', caption: 'Task Management - Visual board to organize tasks by status' },
-      { url: '/images/high-fidelity/home.png', caption: 'Dashboard - Shows all tasks, team progress, and quick actions' },
-      { url: '/images/high-fidelity/login page.png', caption: 'Login Page - User authentication interface' },
-      { url: '/images/high-fidelity/signup page.png', caption: 'Signup Page - User registration interface' }
+      { url: getImagePath('/images/high-fidelity/collaboration.png'), caption: 'Task Collaboration - Main collaboration interface showing team interactions' },
+      { url: getImagePath('/images/high-fidelity/task.png'), caption: 'Task Management - Visual board to organize tasks by status' },
+      { url: getImagePath('/images/high-fidelity/home.png'), caption: 'Dashboard - Shows all tasks, team progress, and quick actions' },
+      { url: getImagePath('/images/high-fidelity/login page.png'), caption: 'Login Page - User authentication interface' },
+      { url: getImagePath('/images/high-fidelity/signup page.png'), caption: 'Signup Page - User registration interface' }
     ],
     wireframes: [
-      { url: '/images/wireframe/collaboration_wireframe.png', caption: 'Task Collaboration Wireframe - Initial layout exploration' },
-      { url: '/images/wireframe/home_wireframe.png', caption: 'Home Dashboard Wireframe - Information architecture for main dashboard' },
-      { url: '/images/wireframe/gamification_wireframe.png', caption: 'Gamification Wireframe - User engagement and reward system structure' }
+      { url: getImagePath('/images/wireframe/collaboration_wireframe.png'), caption: 'Task Collaboration Wireframe - Initial layout exploration' },
+      { url: getImagePath('/images/wireframe/home_wireframe.png'), caption: 'Home Dashboard Wireframe - Information architecture for main dashboard' },
+      { url: getImagePath('/images/wireframe/gamification_wireframe.png'), caption: 'Gamification Wireframe - User engagement and reward system structure' }
     ],
     prototypes: [
       { url: 'https://www.figma.com', label: 'Interactive Prototype', description: 'Full Figma prototype demonstrating task creation, messaging, and progress tracking workflows. Test key user interactions and provide feedback.' }
@@ -41,7 +48,7 @@ export const projects: PortfolioProject[] = [
     title: 'Pet Pathway Web Application',
     slug: 'pet-pathway',
     description: 'A full-stack web application built with React, Node.js, and MongoDB. This project showcases my technical development skills including frontend and backend development, database design, and API integration.',
-    thumbnail: '/images/thumbnail/cute-pet-collage-isolated.jpg',
+    thumbnail: getImagePath('/images/thumbnail/cute-pet-collage-isolated.jpg'),
     category: 'project',
     role: 'Full-Stack Developer',
     problem_statement: 'Pet adoption websites often have too many options with poor search features, and booking vet appointments is spread across different services. Pet owners need a better way to find pets and schedule consultations.',
