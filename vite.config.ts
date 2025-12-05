@@ -7,6 +7,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  // Base path for deployment (leave empty for root domain, or use '/portfolio/' for subdirectory)
-  base: '/',
+  // Base path for GitHub Pages deployment
+  base: '/portfolio/',
 });

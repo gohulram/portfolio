@@ -49,59 +49,32 @@ npm run build
 
 ## Deployment
 
-### Deploy to Netlify (Recommended - Free)
+### Deploy to GitHub Pages (Recommended for Interviews)
 
-1. Push your code to GitHub
-2. Go to [netlify.com](https://netlify.com) and sign in
-3. Click "Add new site" → "Import an existing project"
-4. Connect your GitHub repository
-5. Build settings (auto-detected):
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-6. Click "Deploy site"
+Your portfolio is configured for GitHub Pages deployment. This allows you to share your portfolio directly from GitHub, which is perfect for interviews.
 
-Your site will be live at `https://your-project.netlify.app`
+**Live URL:** https://gohulram.github.io/portfolio/
+
+#### Quick Deploy:
+
+1. **Deploy to GitHub Pages:**
+   ```bash
+   npm run deploy
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to your repository: https://github.com/gohulram/portfolio
+   - Click **Settings** → **Pages**
+   - Select **Branch:** `gh-pages` and **Folder:** `/ (root)`
+   - Click **Save**
+
+3. **Wait 2-3 minutes** for GitHub Pages to build
+
+4. **Your portfolio is live!** 🎉
+
+For detailed instructions, see [GITHUB_PAGES_DEPLOY.md](./GITHUB_PAGES_DEPLOY.md)
 
 **Note:** No environment variables needed! The portfolio uses static data.
-
-### Alternative: Deploy to Vercel
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com) and sign in
-3. Click "New Project"
-4. Import your GitHub repository
-5. Vercel will automatically detect the Vite configuration
-6. Click "Deploy"
-
-Your site will be live at `https://your-project.vercel.app`
-
-### Alternative: Deploy to GitHub Pages
-
-1. Install gh-pages:
-```bash
-npm install --save-dev gh-pages
-```
-
-2. Add to `package.json`:
-```json
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-```
-
-3. Update `vite.config.ts`:
-```typescript
-export default defineConfig({
-  base: '/portfolio/', // your repo name
-  plugins: [react()],
-})
-```
-
-4. Deploy:
-```bash
-npm run deploy
-```
 
 ## Project Structure
 
