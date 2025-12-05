@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Gohul H</title>
     <script>
-      // GitHub Pages 404.html workaround for React Router
-      // This redirects all 404s to index.html with the correct path
-      var pathSegmentsToKeep = 1;
+      // GitHub Pages 404.html workaround for React Router with base path
+      // This redirects all 404s to index.html with the correct path for /portfolio/ base
+      var pathSegmentsToKeep = 2; // Keep /portfolio/ in the path
       
       var l = window.location;
+      var basePath = '/portfolio';
+      
+      // Get the path after /portfolio/
+      var pathAfterBase = l.pathname.replace(basePath, '') || '/';
+      
+      // Redirect to index.html with the path as a query parameter
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        basePath + '/?/' + pathAfterBase.slice(1).replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
@@ -22,6 +27,7 @@
   <body>
     <noscript>
       <p>Please enable JavaScript to view this portfolio.</p>
+      <p><a href="/portfolio/">Go to Home</a></p>
     </noscript>
   </body>
 </html>
